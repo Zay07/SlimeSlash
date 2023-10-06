@@ -18,9 +18,9 @@ def GenerateWorld2(game):
         for y in range(game.world.gridLengthY):
             renderPos = game.world.world[x][y]["renderPos"]
 
-            # 65% chance of adding the tile position to the list
-            if random.random() < 0.65:
-                tilePositions.append(((renderPos[0] + game.width / 2) * 0.91, (renderPos[1] + game.height / 4) * 1.075))
+            # 75% chance of adding the tile position to the list
+            if random.random() < 0.75:
+                tilePositions.append(((renderPos[0] + game.width / 2) * 0.91, (renderPos[1] - game.height / 4) * 1.075))
 
     return tilePositions
 
